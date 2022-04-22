@@ -41,7 +41,6 @@ if ( $attachments ) {
 } 
  
 }
-
-
+ /* for any assistance to hire me for your next project , skype me at imran.javed11 Thank you */
 
 ?>
