@@ -35,11 +35,38 @@ if ( $attachments ) {
 			if(  empty( $alt_text ) ){
 
 				$image_alt = $attachment->post_title;
+				$getImageFileName = getImageName($image_alt);
 				update_post_meta($attachment->ID, '_wp_attachment_image_alt', $image_alt);
 		}
 	}
 } 
  
+}
+
+
+
+
+// remove the file extension if any, get the image file name and return
+function getImageName ($str ){
+    $fileExt=''; 
+    if ( strpos($str, '.png') !== false ) {
+        $fileExt = substr($str, -4); 
+        $filename = explode($fileExt, $str);
+        $filename =  isset($filename[0]) ? $filename[0] : '';
+        
+    }else if ( strpos($str, '.jpeg') !== false ){ 
+        $fileExt = substr($str, -5); 
+        $filename = explode($fileExt, $str);
+        $filename =  isset($filename[0]) ? $filename[0] : '';
+        
+    } else if ( strpos($str, '.jpg') !== false ){
+        $fileExt = substr($str, -4); 
+        $filename = explode($fileExt, $str);
+         $filename =  isset($filename[0]) ? $filename[0] : '';
+    } 
+    
+    return $filename; 
+    
 }
  /* For any assistance, or hire me for your next project , skype me at imran.javed11
 	Please subscribe my youtube channel link is: https://bit.ly/learn-wp-with-imran-javed-on-youtube
