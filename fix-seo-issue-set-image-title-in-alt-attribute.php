@@ -41,6 +41,10 @@ if ( $attachments ) {
 } 
  
 }
- /* for any assistance to hire me for your next project , skype me at imran.javed11 Thank you */
+ /* For any assistance, or hire me for your next project , skype me at imran.javed11
+	Please subscribe my youtube channel link is: https://bit.ly/learn-wp-with-imran-javed-on-youtube
+	
+	Thank you!
+ */
 
 ?>
