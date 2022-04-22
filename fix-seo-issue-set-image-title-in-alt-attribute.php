@@ -47,21 +47,21 @@ if ( $attachments ) {
 
 
 // remove the file extension if any, get the image file name and return
-function getImageName ($str ){
+function getImageName ($Imgfilename ){
     $fileExt=''; 
-    if ( strpos($str, '.png') !== false ) {
-        $fileExt = substr($str, -4); 
-        $filename = explode($fileExt, $str);
+    if ( strpos($Imgfilename, '.png') !== false ) {
+        $fileExt = substr($Imgfilename, -4); 
+        $filename = explode($fileExt, $Imgfilename);
         $filename =  isset($filename[0]) ? $filename[0] : '';
         
-    }else if ( strpos($str, '.jpeg') !== false ){ 
-        $fileExt = substr($str, -5); 
-        $filename = explode($fileExt, $str);
+    }else if ( strpos($Imgfilename, '.jpeg') !== false ){ 
+        $fileExt = substr($Imgfilename, -5); 
+        $filename = explode($fileExt, $Imgfilename);
         $filename =  isset($filename[0]) ? $filename[0] : '';
         
-    } else if ( strpos($str, '.jpg') !== false ){
-        $fileExt = substr($str, -4); 
-        $filename = explode($fileExt, $str);
+    } else if ( strpos($Imgfilename, '.jpg') !== false ){
+        $fileExt = substr($Imgfilename, -4); 
+        $filename = explode($fileExt, $Imgfilename);
          $filename =  isset($filename[0]) ? $filename[0] : '';
     } 
     
